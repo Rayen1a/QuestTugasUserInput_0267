@@ -193,5 +193,32 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                 }
                 Spacer(modifier = Modifier.height(16.dp))
 
+                Text(
+                    text = stringResource(id = R.string.label_skills),
+                    modifier = Modifier.align(Alignment.Start),
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = 14.sp
+                )
+                Spacer(modifier = Modifier.height(8.dp))
+
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Checkbox(checked = isAndroidChecked, onCheckedChange = { isAndroidChecked = it })
+                        Text(stringResource(id = R.string.skill_android), fontSize = 14.sp)
+                    }
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Checkbox(checked = isUiUxChecked, onCheckedChange = { isUiUxChecked = it })
+                        Text(stringResource(id = R.string.skill_uiux), fontSize = 14.sp)
+                    }
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Checkbox(checked = isWebChecked, onCheckedChange = { isWebChecked = it })
+                        Text(stringResource(id = R.string.skill_web), fontSize = 14.sp)
+                    }
+                }
+                Spacer(modifier = Modifier.height(24.dp))
+
 
 }
