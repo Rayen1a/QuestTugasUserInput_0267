@@ -220,5 +220,31 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                 }
                 Spacer(modifier = Modifier.height(24.dp))
 
+                // Tombol Proceed
+                Button(
+                    onClick = {
+                        finalNamaLengkap = "$namaDepan $namaBelakang".trim()
+                        finalEmail = email
+                        finalTglLahir = tglLahir
+                        finalExperience = selectedExperience
+
+                        val skillList = mutableListOf<String>()
+                        if (isAndroidChecked) skillList.add("Android")
+                        if (isUiUxChecked) skillList.add("UI/UX")
+                        if (isWebChecked) skillList.add("Web")
+                        finalSkills = if (skillList.isEmpty()) "-" else skillList.joinToString(", ")
+
+                        isSubmitted = true
+                    },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(50.dp),
+                    shape = RoundedCornerShape(12.dp),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = if (isFormValid) colorResource(id = R.color.purple_500) else colorResource(id = R.color.button_disabled_gray),
+                        contentColor = if (isFormValid) Color.White else Color.Gray
+                    ),
+                    enabled = isFormValid
+                ) {
 
 }
