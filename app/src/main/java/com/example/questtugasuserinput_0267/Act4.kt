@@ -28,5 +28,29 @@ import java.util.Calendar
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FormDataDiri(modifier: Modifier = Modifier) {
+    var namaDepan by remember { mutableStateOf("") }
+    var namaBelakang by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf("") }
+    var tglLahir by remember { mutableStateOf("") }
+
+    var expanded by remember { mutableStateOf(false) }
+    val experienceOptions = listOf("Fresh Graduate", "1-2 Tahun", "> 3 Tahun")
+    var selectedExperience by remember { mutableStateOf("") }
+
+    var isAndroidChecked by remember { mutableStateOf(false) }
+    var isUiUxChecked by remember { mutableStateOf(false) }
+    var isWebChecked by remember { mutableStateOf(false) }
+
+    var isSubmitted by remember { mutableStateOf(false) }
+
+    var finalNamaLengkap by remember { mutableStateOf("") }
+    var finalEmail by remember { mutableStateOf("") }
+    var finalTglLahir by remember { mutableStateOf("") }
+    var finalExperience by remember { mutableStateOf("") }
+    var finalSkills by remember { mutableStateOf("") }
+
+    val context = LocalContext.current
+    val isFormValid = namaDepan.isNotEmpty() && namaBelakang.isNotEmpty() && email.isNotEmpty() && tglLahir.isNotEmpty() && selectedExperience.isNotEmpty()
+
 
 }
