@@ -255,5 +255,16 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
             }
         }
 
+        // 3. BOX HASIL SUBMIT (Diletakkan di luar Card, di bawahnya)
+        if (isSubmitted) {
+            ElevatedCard(
+                elevation = CardDefaults.cardElevation(defaultElevation = 6.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.Black),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp)
+                    .offset(y = (-10).dp) // Sedikit ditarik ke atas agar dekat dengan form
+                    .wrapContentHeight()
+            ) {
 
 }
