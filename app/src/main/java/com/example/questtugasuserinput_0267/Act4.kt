@@ -52,5 +52,12 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
     val context = LocalContext.current
     val isFormValid = namaDepan.isNotEmpty() && namaBelakang.isNotEmpty() && email.isNotEmpty() && tglLahir.isNotEmpty() && selectedExperience.isNotEmpty()
 
+    // Menggunakan Column utama dengan scroll agar seluruh halaman bisa digulir
+    Column(
+        modifier = modifier
+            .fillMaxSize()
+            .background(Color.White)
+            .verticalScroll(rememberScrollState())
+    ) {
 
 }
