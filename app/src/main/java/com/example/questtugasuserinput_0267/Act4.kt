@@ -69,5 +69,21 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                 .height(280.dp)
         )
 
-
-}
+        // 2. Form Melayang (ElevatedCard)
+        // Kita beri padding horizontal sedikit agar shadow-nya terlihat, lalu tarik ke atas dengan offset
+        ElevatedCard(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp) // Memberi ruang untuk shadow di kiri kanan
+                .offset(y = (-30).dp), // Menarik Card ke atas agar menimpa gambar
+            shape = RoundedCornerShape(24.dp), // Melengkung di semua sudut
+            colors = CardDefaults.cardColors(containerColor = Color.White),
+            elevation = CardDefaults.cardElevation(defaultElevation = 8.dp) // Ini yang memunculkan shadow tipis
+        ) {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 24.dp, vertical = 24.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                }
