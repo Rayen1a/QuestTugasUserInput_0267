@@ -161,4 +161,19 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                         shape = RoundedCornerShape(12.dp)
                     )
 
-                    }
+                    Box(modifier = Modifier.weight(1f)) {
+                        OutlinedTextField(
+                            value = selectedExperience,
+                            onValueChange = { },
+                            readOnly = true,
+                            label = { Text(stringResource(id = R.string.hint_experience), fontSize = 12.sp) },
+                            trailingIcon = {
+                                IconButton(onClick = { expanded = !expanded }) {
+                                    Icon(Icons.Default.ArrowDropDown, contentDescription = "Dropdown")
+                                }
+                            },
+                            modifier = Modifier.fillMaxWidth(),
+                            shape = RoundedCornerShape(12.dp)
+                        )
+
+}
