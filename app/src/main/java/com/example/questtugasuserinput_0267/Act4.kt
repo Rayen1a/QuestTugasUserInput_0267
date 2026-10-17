@@ -279,5 +279,7 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
             }
         }
 
-
+        // Spacer di paling bawah agar aman saat di-scroll
+        Spacer(modifier = Modifier.height(40.dp))
+    }
 }
