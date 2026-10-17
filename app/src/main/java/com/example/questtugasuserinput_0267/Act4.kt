@@ -86,4 +86,19 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                     .padding(horizontal = 24.dp, vertical = 24.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                }
+                Text(
+                    text = stringResource(id = R.string.form_title),
+                    fontSize = 24.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = colorResource(id = R.color.form_title_color)
+                )
+                Spacer(modifier = Modifier.height(8.dp))
+                Text(
+                    text = stringResource(id = R.string.form_subtitle),
+                    fontSize = 12.sp,
+                    color = Color.Gray
+                )
+                Spacer(modifier = Modifier.height(24.dp))
+
+
+}
