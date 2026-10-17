@@ -59,5 +59,15 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
             .background(Color.White)
             .verticalScroll(rememberScrollState())
     ) {
+        // 1. Gambar Header
+        Image(
+            painter = painterResource(id = R.drawable.foto_komunita),
+            contentDescription = "Header Image",
+            contentScale = ContentScale.Crop,
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(280.dp)
+        )
+
 
 }
