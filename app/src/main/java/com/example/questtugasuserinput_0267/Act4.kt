@@ -246,5 +246,14 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                     ),
                     enabled = isFormValid
                 ) {
+                    Text(
+                        text = stringResource(id = R.string.submit),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 16.sp
+                    )
+                }
+            }
+        }
+
 
 }
