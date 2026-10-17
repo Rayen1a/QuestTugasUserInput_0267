@@ -266,5 +266,18 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                     .offset(y = (-10).dp) // Sedikit ditarik ke atas agar dekat dengan form
                     .wrapContentHeight()
             ) {
+                Column(
+                    modifier = Modifier.padding(16.dp),
+                    verticalArrangement = Arrangement.spacedBy(4.dp)
+                ) {
+                    Text(text = "Nama : $finalNamaLengkap", color = Color.White, fontSize = 14.sp)
+                    Text(text = "Email : $finalEmail", color = Color.White, fontSize = 14.sp)
+                    Text(text = "Tgl Lahir : $finalTglLahir", color = Color.White, fontSize = 14.sp)
+                    Text(text = "Experience : $finalExperience", color = Color.White, fontSize = 14.sp)
+                    Text(text = "Skills : $finalSkills", color = Color.White, fontSize = 14.sp)
+                }
+            }
+        }
+
 
 }
